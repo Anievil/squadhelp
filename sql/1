@@ -1,0 +1,12 @@
+SELECT COUNT(admin) as admin, COUNT(customer) as customer
+FROM users;
+
+UPDATE users
+SET cashback=spentMoney * 10 / 100
+WHERE role like 'customer' AND (purchaseDate BETWEEN "2020-12-25" AND "2021-01-14');
+
+UPDATE users
+SET score=score+10
+WHERE role like 'Creative'
+ORDER BY rating DESC
+FETCH FIRST 5 ROWS ONLY;

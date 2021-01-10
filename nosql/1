@@ -1,0 +1,3 @@
+> db.Messages.insertMany([{ "username": "user1", "message": "паровоз"}, {"username": "user2", message: "Класс"}, {"username": "user3", message: "паровоз"}])
+
+> db.Messages.find({"message": "паровоз"}).count()
